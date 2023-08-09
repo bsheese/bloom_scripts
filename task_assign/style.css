@@ -19,9 +19,9 @@
     margin-top: 10px;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
     background-color: #add8e6; /* or any light blue color of your choice */
-}
+} */
 
 tr.empty-row td {
     min-height: 20px; /* adjust as needed */
