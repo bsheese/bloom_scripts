@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Task Assignment</title>
+</head>
+<body>
+    <h1>Task Assignment</h1>
+    <div id="inputSection">
+        <label for="weeks">Number of Weeks:</label>
+        <input type="number" id="weeks" min="1"><br><br>
+        <label for="startDate">Starting Date:</label>
+        <input type="date" id="startDate"><br><br>
+        <label for="num">Number of Students/Tasks:</label>
+        <input type="number" id="num" oninput="updateNumber()" min="1"><br><br>
+    </div>
+    <div id="studentsTasksSection">
+        <div class="column">
+            <!-- <label>Students</label> -->
+            <div id="studentsColumn"></div>
+        </div>
+        <div class="column">
+            <!-- <label>Tasks</label> -->
+            <div id="tasksColumn"></div>
+        </div>
+        <button onclick="assignTasks()">Assign Tasks</button>
+    </div>
+    <div id="output"></div>
+    <a id="download" style="display:none;"></a>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

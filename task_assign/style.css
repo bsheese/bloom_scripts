@@ -1,0 +1,29 @@
+#studentsTasksSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px; /* Adjust the width as needed */
+    margin-right: 10px;
+}
+
+#assignButtonDiv {
+    text-align: center;
+}
+
+#download {
+    display: block;
+    margin-top: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #add8e6; /* or any light blue color of your choice */
+}
+
+tr.empty-row td {
+    min-height: 20px; /* adjust as needed */
+    height: 20px;
+}
