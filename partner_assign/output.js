@@ -2,15 +2,16 @@ function generateTable(weeks, startDate, students) {
     const outputDiv = document.getElementById("output");
     let tableHTML = `<table><tr><th>Week Date</th><th>Week #</th><th>Group</th><th>Student Names</th></tr>`;
     let csvContent = "data:text/csv;charset=utf-8,Week Date,Week,Group,Student Names\n";
-    let prevGroups = [];
+let prevGroups = [];
 
-    for (let week = 0; week < weeks; week++) {
-        let groups;
-        do {
-            groups = createGroups([...students]);
-        } while (hasRepeatGroups(groups, prevGroups));
+	for (let week = 0; week < weeks; week++) {
+		let groups;
+		do {
+			groups = createGroups([...students]);
+		} while (hasRepeatGroups(groups, prevGroups));
 
-        prevGroups = groups;
+		// You can store the current groups in the prevGroups array
+		prevGroups.push(...groups);
 
         const weekStartDate = new Date(startDate);
         weekStartDate.setDate(weekStartDate.getDate() + 7 * week);

@@ -23,6 +23,13 @@ function createGroups(students) {
     if (students.length % 2 !== 0) {
         groups[groups.length - 1].push(students[students.length - 1]);
     }
+
+    // Sort the students within each group
+    groups.forEach(group => group.sort());
+
+    // Sort the groups by their first student
+    groups.sort((a, b) => a[0].localeCompare(b[0]));
+
     return groups;
 }
 
