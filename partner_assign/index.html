@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    <title>Student Grouping</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Create Student Pairs</title>
+	
 </head>
 <body>
-    <h1>Student Grouping</h1>
+    <h1>Create Student Pairs</h1>
+	<li>Randomly assigns students to pairs.
+	<li>Tries to keep pairs from repeating over the different weeks.
+	<li>If you've got an odd number of students, you'll get pairs plus one triplet.
+	<li>This may crash with small numbers of students. (Maybe I'll fix it later. Let me know if comes up.)
+	<br><br>
+	<hr><br><br>
+	<h2>Information you need to provide:</h2>
+	<br>
     <label for="weeks">Number of Weeks:</label>
     <input type="number" id="weeks" min="1" required><br><br>
     <label for="startDate">Starting Date:</label>
@@ -16,6 +25,8 @@
     <label for="numStudents">Number of Students:</label>
     <input type="number" id="numStudents" oninput="updateStudents()" min="1" required><br><br>
     <div id="studentsSection"></div>
+	<hr><br><br>
+	Once you've entered all student names click the button below to make the table.<br><br>
     <button onclick="generateGroups()">Generate Groups</button>
     <div id="output"></div>
     <a id="download" style="display:none;"></a>

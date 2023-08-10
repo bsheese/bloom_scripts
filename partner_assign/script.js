@@ -3,7 +3,7 @@ function updateStudents() {
     const studentsSection = document.getElementById("studentsSection");
     studentsSection.innerHTML = "";
     for (let i = 0; i < numStudents; i++) {
-        studentsSection.innerHTML += `<label for="student${i}">Student ${i + 1}:</label><input type="text" id="student${i}" required><br>`;
+        studentsSection.innerHTML += `<label for="student${i}">Student ${i + 1}:  </label><input type="text" id="student${i}" required><br>`;
     }
 }
 
