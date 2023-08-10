@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Task Assignment</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Student Task Assignment</title>
 </head>
 <body>
-    <h1>Task Assignment</h1>
+    <h1>Students Task Assignment</h1>
+	<li>Randomly assigns students to tasks.</li>
+	<li>After the first week, students are rotated through tasks.</li>
+	<li>If you have the same task multiple times, and you don't want a students to rotate through it for multiple weeks, then break up the task in the slots below. Make sure the same task doesn't immediately repeat.</li>
+	
+	<br><hr>
+	
+	<h2>Input the information in this section</h2>
+	
+	
     <div id="inputSection">
         <label for="weeks">Number of Weeks:</label>
         <input type="number" id="weeks" min="1"><br><br>
@@ -25,8 +36,12 @@
             <!-- <label>Tasks</label> -->
             <div id="tasksColumn"></div>
         </div>
-        <button onclick="assignTasks()">Assign Tasks</button>
+		
+        
     </div>
+	<br><hr>
+	One you've entered the information above, click the button below to generate the table. It will open in a new window. If you don't see it, your pop-up blocker may have blocked it.<br> 
+	<button onclick="assignTasks()">Assign Tasks</button>
     <div id="output"></div>
     <a id="download" style="display:none;"></a>
     <script src="script.js"></script>

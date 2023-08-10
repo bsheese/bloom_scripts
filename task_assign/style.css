@@ -27,3 +27,7 @@ tr.empty-row td {
     min-height: 20px; /* adjust as needed */
     height: 20px;
 }
+
+body {
+  margin-left: 40px;
+}
