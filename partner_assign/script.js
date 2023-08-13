@@ -36,8 +36,11 @@ function createGroups(students) {
 
 
 function hasRepeatGroups(groups, prevGroups) {
+    // Take only the last six weeks of previous groups
+    const recentPrevGroups = prevGroups.slice(-6 * (groups.length));
+
     for (let group of groups) {
-        for (let prevGroup of prevGroups) {
+        for (let prevGroup of recentPrevGroups) {
             if (group.length === prevGroup.length && group.every(student => prevGroup.includes(student))) {
                 return true; // Repeat group found
             }
@@ -45,6 +48,7 @@ function hasRepeatGroups(groups, prevGroups) {
     }
     return false; // No repeat groups found
 }
+
 
 
 
